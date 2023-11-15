@@ -12,7 +12,6 @@ class Workflow(TopologicalSorter):
             context = {}
 
         for task in self.static_order():
-            print(task.__class__.__name__)
             task.execute(context=context)
 
         return context
